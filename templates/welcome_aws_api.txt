@@ -1,0 +1,17 @@
+Welcome! ${username}
+
+Here are your AWS API Access credentials. 
+Some data has been encrypted using your Keybase public key for safety.
+
+AWS Access Key ID: ${access_key_id}
+AWS Secret Access Key:
+
+To retrieve your AWS Secret Access Key, run the following command in your terminal app:
+```
+${secret_decrypt_command}
+```
+
+Installing and configuring AWS CLI access software
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html

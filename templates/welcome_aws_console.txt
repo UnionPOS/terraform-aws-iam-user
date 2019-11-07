@@ -1,0 +1,23 @@
+Welcome! ${username}
+
+Here are your AWS login credentials. 
+Some data has been encrypted using your Keybase public key for safety.
+
+Account Alias: ${account_alias}
+Sign-in URL: ${account_signin_url}
+Username: ${username}
+
+To retrieve your password, run the following command in your terminal app.
+```
+${password_decrypt_command}
+```
+
+You will be asked to change your password on first login.
+
+AWS passwords must include
+at least 32 characters
+Uppercase Letters
+Lowercase Letters
+Numbers
+Special Characters
+
