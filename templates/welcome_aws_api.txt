@@ -1,17 +1,59 @@
 Welcome! ${username}
 
-Here are your AWS API Access credentials. 
+Here are your AWS API Access credentials.
 Some data has been encrypted using your Keybase public key for safety.
 
 AWS Access Key ID: ${access_key_id}
 AWS Secret Access Key:
 
-To retrieve your AWS Secret Access Key, run the following command in your terminal app:
+To decrypt your AWS Secret Access Key, run the following command in your terminal app:
 ```
 ${secret_decrypt_command}
 ```
 
-Installing and configuring AWS CLI access software
+
+Configuring the AWS CLI
+
+If you have run UnionPOS Baseline provisioning tool the aws cli application should already be installed.
+The aws configure command is generally the fastest way to set up your AWS CLI access credentials.
+
+Open Terminal app and execute the following command
+
+```sh
+aws configure
+```
+
+You will be prompted for your credentials and default preferences.
+The following example shows sample values.
+Replace them with your own values as described above.
+
+```sh
+$ aws configure
+AWS Access Key ID [None]: ${access_key_id}
+AWS Secret Access Key [None]: paste your decrypted secret access key here
+Default region name [None]: us-west-2
+Default output format [None]: json
+```
+
+If you receive the message `command not found` then the aws cli software is not installed.
+
+Follow the links below for instructions on installing and configuring AWS CLI access software
 
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+
+verify your configuration by pasting the following command in terminal
+
+```sh
+aws sts get-caller-identity
+```
+
+if your configuration is correct the command should return the following
+
+```sh
+{
+    "UserId": "${access_key_id}",
+    "Account": "731646523614",
+    "Arn": "arn:aws:iam::731646523614:user/users/${username}"
+}
+```

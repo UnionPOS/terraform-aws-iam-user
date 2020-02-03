@@ -1,6 +1,6 @@
 Welcome! ${username}
 
-Here are your AWS login credentials. 
+Here are your AWS login credentials.
 Some data has been encrypted using your Keybase public key for safety.
 
 Account Alias: ${account_alias}
@@ -12,7 +12,10 @@ To retrieve your password, run the following command in your terminal app.
 ${password_decrypt_command}
 ```
 
-You will be asked to change your password on first login.
+Important note:
+
+You will be required to change your password on first login.
+AWS will give a generic error message if your new password does not meet complexity requirements.
 
 AWS passwords must include
 at least 32 characters
@@ -21,3 +24,9 @@ Lowercase Letters
 Numbers
 Special Characters
 
+
+We strongly recommend that you enable multifactor authentication for your UnionPOS AWS account.
+
+Follow the link below for instructions on enabling mfa for your UnionPOS AWS account.
+
+https://www.youtube.com/watch?v=A3AObXBJ4Lw
